@@ -89,11 +89,7 @@ export default function Pricing() {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
-  const handlePayNow = (e: React.MouseEvent) => {
-    e.preventDefault();
-    const el = document.querySelector("#contact");
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
+
 
   return (
     <section id="pricing" className={styles.pricing} ref={ref} aria-label="Packages and Pricing">
@@ -166,16 +162,7 @@ export default function Pricing() {
                   <p className={styles.descSub}>{pkg.descSub}</p>
                 </div>
 
-                {/* Divider with dot */}
-                <div className={styles.dividerWrap}>
-                  <div className={styles.dividerLine} />
-                  <div className={styles.dividerDot} />
-                  <div className={styles.dividerLine} />
-                </div>
 
-                <button className={styles.payBtn} onClick={handlePayNow}>
-                  PAY NOW
-                </button>
               </div>
             </motion.article>
           ))}
