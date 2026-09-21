@@ -12,7 +12,6 @@ const footerLinks = [
 const socials = [
   { label: "LinkedIn", href: "https://linkedin.com" },
   { label: "Instagram", href: "https://instagram.com" },
-  { label: "GitHub", href: "https://github.com" },
 ];
 
 export default function Footer() {
