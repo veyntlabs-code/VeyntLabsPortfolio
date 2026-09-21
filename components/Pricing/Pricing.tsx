@@ -22,7 +22,7 @@ const packages = [
   {
     id: "dynamic",
     badge: "DYNAMIC",
-    priceText: "₹40k–50k",
+    priceText: "₹15k–25k",
     session: "/ project",
     title: "Dynamic Website",
     descMain: "A custom, scalable website with more pages, forms, and business logic built around your workflow.",
