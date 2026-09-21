@@ -44,45 +44,6 @@ const packages = [
     descSub:
       "Every full project is custom. The final budget depends on your needs, content, and functionality.",
   },
-  {
-    id: "social",
-    badge: "MARKETING",
-    code: "00 / MARKETING",
-    priceText: "₹10,000/month",
-    session: " / SESSION",
-    priceDesc: "₹10,000/MONTH",
-    title: "Social Media Handling",
-    descMain:
-      "Monthly social media planning, posting, engagement, and campaign support to keep your brand active and relevant.",
-    descSub:
-      "A steady monthly package for brand visibility and community building.",
-  },
-  {
-    id: "reels",
-    badge: "MARKETING",
-    code: "00 / MARKETING",
-    priceText: "₹20,000/month",
-    session: " / SESSION",
-    priceDesc: "₹20,000/MONTH",
-    title: "Reels + Content Handling",
-    descMain:
-      "Reels shooting, editing, content production, and social media handling from concept to publishing.",
-    descSub:
-      "This covers short-form video content, story execution, and consistent digital presence.",
-  },
-  {
-    id: "branding",
-    badge: "BRANDING",
-    code: "00 / BRANDING",
-    priceText: "Depends on\nrequirement",
-    session: " / SESSION",
-    priceDesc: "DEPENDS ON REQUIREMENT",
-    title: "Branding + Website Setup",
-    descMain:
-      "Logo creation, end-to-end branding, menu design, website setup, and a full visual identity tailored to your business.",
-    descSub:
-      "This depends on the final requirement, design depth, and the number of assets needed.",
-  },
 ];
 
 export default function Pricing() {
