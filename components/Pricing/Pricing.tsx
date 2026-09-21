@@ -32,7 +32,6 @@ const packages = [
       "Forms and integrations",
       "Advanced animations"
     ],
-    popular: true,
   },
   {
     id: "full",
@@ -88,7 +87,7 @@ export default function Pricing() {
           {packages.map((pkg, i) => (
             <motion.article
               key={pkg.id}
-              className={`${styles.card} ${pkg.popular ? styles.popularCard : ""}`}
+              className={styles.card}
               initial={{ opacity: 0, y: 40 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{
@@ -103,7 +102,6 @@ export default function Pricing() {
               <div className={styles.cardContent}>
                 <div className={styles.badgeWrap}>
                   <span className={styles.badge}>{pkg.badge}</span>
-                  {pkg.popular && <span className={styles.popularBadge}>Most Popular</span>}
                 </div>
 
                 <h3 className={styles.title}>{pkg.title}</h3>

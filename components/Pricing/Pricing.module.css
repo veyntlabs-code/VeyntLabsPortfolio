@@ -62,11 +62,6 @@
   transform: translateY(-4px);
 }
 
-.popularCard {
-  border-color: rgba(170, 255, 0, 0.2);
-  background: rgba(255, 255, 255, 0.025);
-}
-
 /* Subtle inner glow on hover */
 .glow {
   position: absolute;
@@ -107,16 +102,6 @@
   color: #a1a1aa;
 }
 
-.popularBadge {
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  color: #080808;
-  background: #aaff00;
-  padding: 0.25rem 0.6rem;
-  border-radius: 50px;
-  text-transform: uppercase;
-}
 
 .title {
   font-size: 1.5rem;
@@ -198,22 +183,10 @@
   transition: all 0.2s ease;
 }
 
-.popularCard .actionBtn {
-  background: #fff;
-  color: #080808;
-  border-color: #fff;
-  font-weight: 600;
-}
-
 .actionBtn:hover {
   background: #aaff00;
   border-color: #aaff00;
   color: #080808;
-}
-
-.popularCard .actionBtn:hover {
-  background: #aaff00;
-  border-color: #aaff00;
 }
 
 @media (max-width: 1024px) {
