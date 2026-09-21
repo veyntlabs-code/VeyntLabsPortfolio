@@ -76,18 +76,6 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* CTA */}
-          <a
-            href="#contact"
-            className={styles.ctaBtn}
-            onClick={(e) => {
-              e.preventDefault();
-              handleNavClick("#contact");
-            }}
-            aria-label="Contact Veynt Labs"
-          >
-            Let&apos;s Talk <span aria-hidden="true">→</span>
-          </a>
 
           {/* Hamburger */}
           <button
@@ -134,19 +122,7 @@ export default function Navbar() {
                   {link.label}
                 </motion.a>
               ))}
-              <motion.a
-                href="#contact"
-                className={styles.mobileCta}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick("#contact");
-                }}
-                initial={{ opacity: 0, x: -16 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: navLinks.length * 0.06, duration: 0.3 }}
-              >
-                Let&apos;s Talk →
-              </motion.a>
+
             </div>
           </motion.div>
         )}
