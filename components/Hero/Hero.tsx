@@ -152,16 +152,7 @@ export default function Hero() {
       <div className={styles.noise} aria-hidden="true" />
 
       <div className={styles.content}>
-        <motion.div
-          className={styles.badge}
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          custom={0.1}
-        >
-          <span className={styles.badgeDot} aria-hidden="true" />
-          Digital Technology Company
-        </motion.div>
+
 
         <motion.h1
           className={styles.headline}

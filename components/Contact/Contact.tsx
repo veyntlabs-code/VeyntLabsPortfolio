@@ -39,7 +39,7 @@ const socials = [
   {
     id: "instagram",
     label: "Instagram",
-    href: "https://instagram.com",
+    href: "https://www.instagram.com/veyntlabs/?hl=en",
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
@@ -99,10 +99,24 @@ export default function Contact() {
     if (!validate()) return;
 
     setStatus("sending");
-    // Simulate async send — replace with actual API call
-    await new Promise((r) => setTimeout(r, 1200));
-    setStatus("success");
-    setForm({ name: "", email: "", company: "", message: "" });
+    
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        setForm({ name: "", email: "", company: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      console.error(error);
+      setStatus("error");
+    }
   };
 
   return (

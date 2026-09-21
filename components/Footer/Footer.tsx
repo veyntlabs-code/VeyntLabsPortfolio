@@ -11,7 +11,7 @@ const footerLinks = [
 
 const socials = [
   { label: "LinkedIn", href: "https://linkedin.com" },
-  { label: "Instagram", href: "https://instagram.com" },
+  { label: "Instagram", href: "https://www.instagram.com/veyntlabs/?hl=en" },
   { label: "Email", href: "mailto:veyntlabs@gmail.com" },
 ];
 

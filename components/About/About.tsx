@@ -54,15 +54,6 @@ export default function About() {
             difference.
           </motion.p>
 
-          <motion.div
-            className={styles.tagline}
-            variants={fadeUp(0.35)}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-          >
-            <span className={styles.dot} aria-hidden="true" />
-            Based in India&nbsp;&nbsp;·&nbsp;&nbsp;Working Worldwide
-          </motion.div>
         </div>
       </div>
 
