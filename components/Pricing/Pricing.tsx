@@ -7,42 +7,46 @@ import styles from "./Pricing.module.css";
 const packages = [
   {
     id: "static",
-    badge: "WEBSITE DEVELOPMENT",
-    code: "00 / WEBSITE DEVELOPMENT",
+    badge: "STATIC",
     priceText: "₹8,000",
-    session: " / SESSION",
-    priceDesc: "₹8,000",
+    session: "/ project",
     title: "Static Website",
-    descMain:
-      "A clean, fast, and professional static website for a business that needs a strong online presence without a complex backend.",
-    descSub:
-      "Best for brochure sites and essential business info. Custom functionality may move this higher based on scope.",
+    descMain: "A clean, lightning-fast static website for a strong online presence without a complex backend.",
+    features: [
+      "Optimized for speed",
+      "Fully responsive design",
+      "Basic SEO setup",
+      "Perfect for brochure sites"
+    ]
   },
   {
     id: "dynamic",
-    badge: "WEBSITE DEVELOPMENT",
-    code: "00 / WEBSITE DEVELOPMENT",
-    priceText: "₹40,000 – ₹50,000",
-    session: " / SESSION",
-    priceDesc: "₹40,000 – ₹50,000",
+    badge: "DYNAMIC",
+    priceText: "₹40k–50k",
+    session: "/ project",
     title: "Dynamic Website",
-    descMain:
-      "A custom, scalable website with more pages, sections, forms, and business logic built around your real workflow.",
-    descSub:
-      "This is where features, integrations, and more complex pages increase the project value.",
+    descMain: "A custom, scalable website with more pages, forms, and business logic built around your workflow.",
+    features: [
+      "Custom business logic",
+      "Content Management System",
+      "Forms and integrations",
+      "Advanced animations"
+    ],
+    popular: true,
   },
   {
     id: "full",
-    badge: "WEBSITE DEVELOPMENT",
-    code: "00 / WEBSITE DEVELOPMENT",
-    priceText: "Depends on\nrequirement",
-    session: " / SESSION",
-    priceDesc: "DEPENDS ON\nREQUIREMENT",
+    badge: "CUSTOM",
+    priceText: "Custom",
+    session: "/ requirement",
     title: "Full Project Build",
-    descMain:
-      "A complete website build depending on your requirements, pages, features, design direction, and business goals.",
-    descSub:
-      "Every full project is custom. The final budget depends on your needs, content, and functionality.",
+    descMain: "A complete website build depending on your unique requirements, design direction, and business goals.",
+    features: [
+      "End-to-end custom design",
+      "Complex workflows",
+      "Third-party integrations",
+      "Dedicated support"
+    ]
   },
 ];
 
@@ -50,7 +54,11 @@ export default function Pricing() {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
-
+  const handleContact = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const el = document.querySelector("#contact");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <section id="pricing" className={styles.pricing} ref={ref} aria-label="Packages and Pricing">
@@ -62,7 +70,7 @@ export default function Pricing() {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            Packages
+            Pricing
           </motion.p>
           <motion.h2
             className={styles.heading}
@@ -70,9 +78,9 @@ export default function Pricing() {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Transparent pricing.
+            Simple pricing.
             <br />
-            Premium delivery.
+            No surprises.
           </motion.h2>
         </div>
 
@@ -80,50 +88,59 @@ export default function Pricing() {
           {packages.map((pkg, i) => (
             <motion.article
               key={pkg.id}
-              className={styles.card}
+              className={`${styles.card} ${pkg.popular ? styles.popularCard : ""}`}
               initial={{ opacity: 0, y: 40 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{
                 duration: 0.6,
-                delay: 0.15 + (i % 3) * 0.1, // Stagger rows slightly
+                delay: 0.15 + (i % 3) * 0.1,
                 ease: [0.16, 1, 0.3, 1],
               }}
             >
-              {/* Top Banner (Abstract grid instead of image) */}
-              <div className={styles.cardBanner}>
-                <div className={styles.bannerGrid} aria-hidden="true" />
-                <div className={styles.badgeRow}>
-                  <div className={styles.badge}>
-                    <span className={styles.dot} />
-                    {pkg.badge}
-                  </div>
-                  <span className={styles.sysOk}>SYS.OK</span>
-                </div>
-              </div>
-
-              {/* Main Content */}
-              <div className={styles.cardBody}>
-                <div className={styles.metaRow}>
-                  <span className={styles.metaCode}>{pkg.code}</span>
-                  <span className={styles.metaPrice}>{pkg.priceDesc}</span>
+              {/* Subtle hover glow effect */}
+              <div className={styles.glow} aria-hidden="true" />
+              
+              <div className={styles.cardContent}>
+                <div className={styles.badgeWrap}>
+                  <span className={styles.badge}>{pkg.badge}</span>
+                  {pkg.popular && <span className={styles.popularBadge}>Most Popular</span>}
                 </div>
 
                 <h3 className={styles.title}>{pkg.title}</h3>
+                <p className={styles.desc}>{pkg.descMain}</p>
 
-                <div className={styles.priceHighlight}>
-                  <div className={styles.priceHighlightBar} />
-                  <div className={styles.priceHighlightText}>
-                    <span className={styles.priceMain}>{pkg.priceText}</span>
-                    <span className={styles.session}>{pkg.session}</span>
-                  </div>
+                <div className={styles.priceWrap}>
+                  <span className={styles.price}>{pkg.priceText}</span>
+                  <span className={styles.session}>{pkg.session}</span>
                 </div>
 
-                <div className={styles.descBlock}>
-                  <p className={styles.descMain}>{pkg.descMain}</p>
-                  <p className={styles.descSub}>{pkg.descSub}</p>
-                </div>
+                <div className={styles.divider} />
 
+                <ul className={styles.featureList}>
+                  {pkg.features.map((feature, idx) => (
+                    <li key={idx} className={styles.featureItem}>
+                      <svg
+                        className={styles.checkIcon}
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                      >
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
 
+                <button className={styles.actionBtn} onClick={handleContact}>
+                  Start Project
+                </button>
               </div>
             </motion.article>
           ))}
