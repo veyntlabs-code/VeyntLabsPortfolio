@@ -8,14 +8,14 @@ const contactDetails = [
   {
     id: "email",
     label: "Email",
-    value: "hello@veyntlabs.com",
-    href: "mailto:hello@veyntlabs.com",
+    value: "veyntlabs@gmail.com",
+    href: "mailto:veyntlabs@gmail.com",
   },
   {
     id: "phone",
     label: "Phone",
-    value: "+91 00000 00000",
-    href: "tel:+910000000000",
+    value: "+91 89251 71946",
+    href: "tel:+918925171946",
   },
   {
     id: "location",
