@@ -73,11 +73,9 @@ export default function Footer() {
         {/* Bottom */}
         <div className={styles.bottom}>
           <p className={styles.copy}>
-            © 2026 Veynt Labs. All rights reserved.
+            © 2026 Veynt Labs.
           </p>
-          <p className={styles.made}>
-            Made with care in India.
-          </p>
+
         </div>
       </div>
     </footer>
