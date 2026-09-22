@@ -60,6 +60,9 @@ export default function Navbar() {
             <Image src="/logo.png" alt="Veynt Labs Logo" width={48} height={48} className={styles.logoImage} />
           </a>
 
+          {/* Center Name */}
+          <div className={styles.centerName}>VEYNT LABS</div>
+
           {/* Desktop Nav */}
           <nav className={styles.desktopNav} aria-label="Main navigation">
             {navLinks.map((link) => (
