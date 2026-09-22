@@ -1,6 +1,7 @@
 "use client";
 
 import styles from "./Footer.module.css";
+import Image from "next/image";
 
 const footerLinks = [
   { label: "Home", href: "#home" },
@@ -27,9 +28,7 @@ export default function Footer() {
         {/* Top */}
         <div className={styles.top}>
           <div className={styles.brand}>
-            <span className={styles.logo}>
-              <span className={styles.logoV}>V</span>EYNT LABS®
-            </span>
+            <Image src="/logo.png" alt="Veynt Labs Logo" width={80} height={80} className={styles.logoImage} />
             <p className={styles.tagline}>
               Digital experiences. Built with purpose.
             </p>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Navbar.module.css";
 
@@ -56,7 +57,7 @@ export default function Navbar() {
             }}
             aria-label="Veynt Labs — Home"
           >
-            <span className={styles.logoV}>V</span>EYNT LABS
+            <Image src="/logo.png" alt="Veynt Labs Logo" width={48} height={48} className={styles.logoImage} />
           </a>
 
           {/* Desktop Nav */}

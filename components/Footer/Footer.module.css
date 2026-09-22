@@ -22,15 +22,9 @@
   gap: 0.75rem;
 }
 
-.logo {
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  color: #fff;
-}
-
-.logoV {
-  color: #aaff00;
+.logoImage {
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 .tagline {

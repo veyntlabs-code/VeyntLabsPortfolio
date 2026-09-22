@@ -42,8 +42,9 @@
   flex-shrink: 0;
 }
 
-.logoV {
-  color: #aaff00;
+.logoImage {
+  object-fit: contain;
+  border-radius: 4px;
 }
 
 .desktopNav {
