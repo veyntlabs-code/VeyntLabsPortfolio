@@ -2,11 +2,12 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import styles from "./Navbar.module.css";
 
 const navLinks = [
   { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
+  { label: "About Us", href: "#about-us" },
   { label: "Services", href: "#services" },
   { label: "Contact", href: "#contact" },
 ];
@@ -56,7 +57,15 @@ export default function Navbar() {
             }}
             aria-label="Veynt Labs — Home"
           >
-            <span className={styles.logoV}>V</span>EYNT LABS
+            <Image
+              src="/veynt-logo-v.png"
+              alt="V Logo"
+              width={80}
+              height={80}
+              className={styles.logoImage}
+              priority
+            />
+            <span>EYNT LABS</span>
           </a>
 
           {/* Desktop Nav */}

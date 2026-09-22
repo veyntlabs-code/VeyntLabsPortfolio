@@ -27,7 +27,7 @@ export default function About() {
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
           >
-            About
+            About Us
           </motion.p>
           <motion.h2
             className={styles.heading}

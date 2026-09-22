@@ -70,13 +70,6 @@ a, button {
   transition: all 0.2s ease;
 }
 
-/* Custom cursor (only on pointer-fine / non-touch devices) */
-@media (pointer: fine) {
-  *, *::before, *::after {
-    cursor: none !important;
-  }
-}
-
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   html {

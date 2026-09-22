@@ -9,12 +9,9 @@ import BrandStatement from "@/components/BrandStatement/BrandStatement";
 import CTA from "@/components/CTA/CTA";
 import Contact from "@/components/Contact/Contact";
 import Footer from "@/components/Footer/Footer";
-import CustomCursor from "@/components/CustomCursor/CustomCursor";
-
 export default function Home() {
   return (
     <main>
-      <CustomCursor />
       <Navbar />
       <Hero />
       <About />

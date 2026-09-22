@@ -39,7 +39,7 @@ const socials = [
   {
     id: "instagram",
     label: "Instagram",
-    href: "https://www.instagram.com/veyntlabs/?hl=en",
+    href: "https://www.instagram.com/veynt.labs?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==",
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>

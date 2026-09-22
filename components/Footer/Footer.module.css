@@ -27,10 +27,15 @@
   font-weight: 700;
   letter-spacing: 0.16em;
   color: #fff;
+  display: flex;
+  align-items: center;
 }
 
-.logoV {
-  color: #aaff00;
+.logoImage {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .tagline {
