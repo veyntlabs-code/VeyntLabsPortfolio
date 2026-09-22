@@ -68,8 +68,7 @@ export default function Navbar() {
             <span>EYNT LABS</span>
           </a>
 
-          {/* Center Name */}
-          <div className={styles.centerName}>VEYNT LABS</div>
+         
 
           {/* Desktop Nav */}
           <nav className={styles.desktopNav} aria-label="Main navigation">
