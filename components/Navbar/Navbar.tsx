@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Navbar.module.css";
 
 const navLinks = [
@@ -67,6 +67,9 @@ export default function Navbar() {
             />
             <span>EYNT LABS</span>
           </a>
+
+          {/* Center Name */}
+          <div className={styles.centerName}>VEYNT LABS</div>
 
           {/* Desktop Nav */}
           <nav className={styles.desktopNav} aria-label="Main navigation">
